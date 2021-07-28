@@ -1,0 +1,187 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-master.yaml
+  - changeSet:
+      id: 1
+      author: ptv
+      changes:
+        - createTable:
+            tableName: interview
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: start
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: finish
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: state
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 2
+      author: ptv
+      changes:
+        - createTable:
+            tableName: poll_question
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: text
+                  type: varchar(500)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: display_order
+                  type: smallserial
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 3
+      author: ptv
+      changes:
+        - insert:
+            tableName: interview
+            columns:
+              - column:
+                  name: name
+                  value: "опрос №-1"
+              - column:
+                  name: start
+                  value: "2021-06-25 10:30:00.144984"
+              - column:
+                  name: finish
+                  value: "2021-07-30 22:00:00.144984"
+              - column:
+                  name: state
+                  value: "ACTIVE"
+
+  - changeSet:
+      id: 4
+      author: ptv
+      changes:
+        - insert:
+            tableName: interview
+            columns:
+              - column:
+                  name: name
+                  value: "опрос №-2"
+              - column:
+                  name: start
+                  value: "2021-07-05 10:30:00.144984"
+              - column:
+                  name: finish
+                  value: "2021-08-10 22:00:00.144984"
+              - column:
+                  name: state
+                  value: "ACTIVE"
+
+  - changeSet:
+      id: 5
+      author: ptv
+      changes:
+        - insert:
+            tableName: interview
+            columns:
+              - column:
+                  name: name
+                  value: "опрос №-3"
+              - column:
+                  name: start
+                  value: "2021-07-15 10:30:00.144984"
+              - column:
+                  name: finish
+                  value: "2021-08-20 22:00:00.144984"
+              - column:
+                  name: state
+                  value: "DISABLE"
+
+  - changeSet:
+      id: 6
+      author: ptv
+      changes:
+        - insert:
+            tableName: poll_question
+            columns:
+              - column:
+                  name: text
+                  value: "Вы любите езду на велосипеде?"
+              - column:
+                  name: display_order
+                  value: 1
+
+  - changeSet:
+      id: 7
+      author: ptv
+      changes:
+        - insert:
+            tableName: poll_question
+            columns:
+              - column:
+                  name: text
+                  value: "Вы любите езду на электросамокате?"
+              - column:
+                  name: display_order
+                  value: 2
+
+  - changeSet:
+      id: 8
+      author: ptv
+      changes:
+        - insert:
+            tableName: poll_question
+            columns:
+              - column:
+                  name: text
+                  value: "Вы любите езду на мотоцикле?"
+              - column:
+                  name: display_order
+                  value: 3
+
+  - changeSet:
+      id: 9
+      author: ptv
+      changes:
+        - insert:
+            tableName: poll_question
+            columns:
+              - column:
+                  name: text
+                  value: "Вы любите езду на автомобиле?"
+              - column:
+                  name: display_order
+                  value: 4
+
+  - changeSet:
+      id: 10
+      author: ptv
+      changes:
+        - insert:
+            tableName: poll_question
+            columns:
+              - column:
+                  name: text
+                  value: "Вы любите езду на роликовых коньках?"
+              - column:
+                  name: display_order
+                  value: 5
