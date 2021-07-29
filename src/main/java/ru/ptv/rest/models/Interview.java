@@ -34,10 +34,10 @@ public class Interview {
     @Enumerated(value = EnumType.STRING)
     private State state;
 
-    @ManyToMany
-    @JoinTable(
-            name = "pollQuestions",
-            joinColumns = @JoinColumn(name = "poll_question_id"),
-            inverseJoinColumns = @JoinColumn(name = "interview_id"))
-    private List<PollQuestion> questions;
+//    @ManyToMany
+//    @JoinTable(
+//            name = "pollQuestions",
+//            joinColumns = @JoinColumn(name = "poll_question_id"),
+//            inverseJoinColumns = @JoinColumn(name = "interview_id"))
+//    private List<PollQuestion> questions;
 }

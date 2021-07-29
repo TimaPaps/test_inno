@@ -27,6 +27,6 @@ public class PollQuestion {
     @Column(nullable = false)
     private Short displayOrder;
 
-    @ManyToMany(mappedBy = "questions")
-    private List<Interview> interviews;
+//    @ManyToMany(mappedBy = "questions")
+//    private List<Interview> interviews;
 }
