@@ -1,5 +1,6 @@
 package ru.ptv.rest.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 import ru.ptv.rest.enums.State;
 
@@ -19,6 +20,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 public class Interview {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

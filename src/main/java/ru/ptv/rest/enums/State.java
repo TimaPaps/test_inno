@@ -9,5 +9,5 @@ package ru.ptv.rest.enums;
  */
 public enum State {
     ACTIVE,
-    DISABLE
+    INACTIVE
 }

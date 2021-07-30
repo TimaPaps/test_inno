@@ -1,5 +1,6 @@
 package ru.ptv.rest.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
@@ -17,6 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 public class PollQuestion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

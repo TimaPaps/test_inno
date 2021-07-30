@@ -114,7 +114,7 @@ databaseChangeLog:
                   value: "2021-08-20 22:00:00.144984"
               - column:
                   name: state
-                  value: "DISABLE"
+                  value: "INACTIVE"
 
   - changeSet:
       id: 6

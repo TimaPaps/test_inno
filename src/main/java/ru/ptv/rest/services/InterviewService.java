@@ -1,6 +1,5 @@
 package ru.ptv.rest.services;
 
-import org.springframework.stereotype.Service;
 import ru.ptv.rest.models.Interview;
 
 import java.util.List;
@@ -14,4 +13,9 @@ import java.util.List;
  */
 public interface InterviewService {
     List<Interview> allInterview();
+    Interview getInterview(Long id);
+    Interview createInterview(Interview interview);
+    Interview updateInterview(Long id, Interview interview);
+    void deleteInterview(Long id);
 }
+
